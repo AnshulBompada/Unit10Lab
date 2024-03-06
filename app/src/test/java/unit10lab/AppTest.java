@@ -4,11 +4,41 @@
 package unit10lab;
 
 import org.junit.jupiter.api.Test;
+import java.util.ArrayList;
+
+
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class AppTest {
-    // @Test void appHasAGreeting() {
-    //     Main classUnderTest = new Main();
-    //     assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
-    // }
+    @Test 
+    void searchByAvailability() {
+        Library lib = new Library(new BookLoader().loadBooks());
+        assertEquals( lib.books, lib.search( "availability", new String() ) );
+    }
+
+    @Test
+    void searchByAuthor() {
+        Library lib = new Library(new BookLoader().loadBooks());
+        ArrayList<Book> chosenBooks = new ArrayList<>();
+        chosenBooks.add(lib.books.get(6));
+        chosenBooks.add(lib.books.get(8));
+        assertEquals( chosenBooks, lib.search( "Author", "J.R.R. Tolkien" ) );
+    }
+
+    @Test 
+    void searchByTitle() {
+        Library lib = new Library(new BookLoader().loadBooks());
+        assertEquals( lib.books.get(5), lib.search( "TiTle", "Dune" ).get(0) );
+    }
+
+    @Test
+    void searchByGenre() {
+        Library lib = new Library(new BookLoader().loadBooks());
+        ArrayList<Book> chosenBooks = new ArrayList<>();
+        chosenBooks.add(lib.books.get(12));
+        chosenBooks.add(lib.books.get(13));
+        chosenBooks.add(lib.books.get(14));
+        assertEquals( chosenBooks, lib.search( "GENRE", "Gothic Fiction" ) );
+    }
 }

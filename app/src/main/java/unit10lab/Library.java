@@ -2,10 +2,11 @@ package unit10lab;
 import java.util.ArrayList;
 
 public class Library {
-    public ArrayList<Book> books;
+    public final ArrayList<Book> books;
 
     public Library(ArrayList<Book> books) {
         this.books = books;
+        System.out.println(books.toString());
     }
     // Method to search books by various criteria
     public ArrayList<Book> search(String field, String query) {
@@ -21,11 +22,11 @@ public class Library {
             case "genre":
                 searchResults.addAll(searchByGenre(query, this.books));
                 break;
-            case "available":
+            case "availability":
                 searchResults.addAll(searchByAvailability(this.books));
                 break;
             default:
-                System.out.println("Invalid search field.");
+                System.out.print("Invalid search field. Please try again.");
                 break;
         }
 
@@ -55,7 +56,7 @@ public class Library {
     public ArrayList<Book> searchByTitle(String title, ArrayList<Book> library) {
         ArrayList<Book> booksByTitle = new ArrayList<>();
         for (int i = 0; i < library.size(); i++) {            
-            if (library.get(i).getAuthor().equals(title)) {
+            if (library.get(i).getTitle().equals(title)) {
                 booksByTitle.add( library.get(i) );
             }
         }
@@ -69,7 +70,7 @@ public class Library {
     public ArrayList<Book> searchByGenre(String genre, ArrayList<Book> library) {
         ArrayList<Book> booksByGenre = new ArrayList<>();
         for (int i = 0; i < library.size(); i++) {            
-            if (library.get(i).getAuthor().equals(genre)) {
+            if (library.get(i).getGenre().equals(genre)) {
              booksByGenre.add( library.get(i) );
             }
         }
