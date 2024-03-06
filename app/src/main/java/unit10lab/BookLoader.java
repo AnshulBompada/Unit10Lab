@@ -6,10 +6,16 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 public class BookLoader {
-    private File libraryData = new File("C:\\Users\\Anshul\\Documents\\RegularCode\\Unit10Lab\\app\\src\\main\\java\\unit10lab\\books.txt");
+    // File path
+    private File libraryData = new File("app\\src\\main\\java\\unit10lab\\books.txt");
+    // File Scanners
     private Scanner libraryCounter;
     private Scanner libraryLoader;
 
+    /**
+     * Constructor
+     * @author Sreemanth Tirumalanadhuni
+     */
     public BookLoader() {
         try {
             libraryCounter = new Scanner(libraryData);
@@ -19,10 +25,19 @@ public class BookLoader {
         }
     }
 
+    /**
+     * Overloaded method of loadBooks to not rquire amountOfBooks
+     * @author Sreemanth Tirumalanadhuni
+     */
     public ArrayList<Book> loadBooks() {
         return loadBooks( bookCounter() );
     }
-
+    /**
+     * Loads the books in books.txt into the arraylist
+     * @param amountOfBooks
+     * @author Sreemanth Tirumalanadhuni
+     * @return Arraylist of all the books in the library
+     */
     private ArrayList<Book> loadBooks(int amountOfBooks) {
         ArrayList<Book> libraryBooks = new ArrayList<Book>();
         
@@ -45,6 +60,11 @@ public class BookLoader {
         return libraryBooks;
       }
 
+    /**
+     * Counts books
+     * @author Sreemanth Tirumalanadhuni
+     * @return Amount of books in books.txt
+     */
     private int bookCounter() {
         int count = 0;
         while ( libraryCounter.hasNext() ) {

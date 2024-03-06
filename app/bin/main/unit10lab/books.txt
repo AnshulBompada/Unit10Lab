@@ -1,0 +1,60 @@
+Pride and Prejudice
+Jane Austen
+Romance
+true
+Wuthering Heights
+Emily Brontë
+Romance
+true
+Jane Eyre
+Charlotte Brontë
+Romance
+true
+War of the Worlds
+H.G. Wells
+Science Fiction
+true
+The Time Machine
+H.G. Wells
+Science Fiction
+true
+Dune
+Frank Herbert
+Science Fiction
+true
+The Hobbit
+J.R.R. Tolkien
+Fantasy
+true
+A Game of Thrones
+George R.R. Martin
+Fantasy
+true
+The Fellowship of the Ring
+J.R.R. Tolkien
+Fantasy
+true
+The Adventures of Sherlock Holmes
+Arthur Conan Doyle
+Mystery
+true
+And Then There Were None
+Agatha Christie
+Mystery
+true
+The Girl with the Dragon Tattoo
+Stieg Larsson
+Mystery
+true
+Dracula
+Bram Stoker
+Gothic Fiction
+true
+Frankenstein
+Mary Shelley
+Gothic Fiction
+true
+The Picture of Dorian Gray
+Oscar Wilde
+Gothic Fiction
+true
