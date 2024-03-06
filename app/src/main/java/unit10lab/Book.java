@@ -48,8 +48,12 @@ public class Book {
     }
 
     // toString method to print Book details
+    /**
+     * Modification of original toString code from Mr.Rob
+     * @author Chistopher Roberson, Abishta Cherukuri-Purna
+     */
     @Override
     public String toString() {
-        return "Title: " + title + "\nAuthor: " + author + "\nGenre: " + genre + "\nAvailable: " + available;
+        return "\033[30;41mTitle:\033[0m " + title + "\n\033[30;44mAuthor:\033[0m " + author + "\n\033[30;43mGenre:\033[0m " + genre + "\n\033[30;42mAvailable:\033[0m " + available;
     }
 }
