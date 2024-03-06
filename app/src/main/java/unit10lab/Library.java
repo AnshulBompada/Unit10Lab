@@ -3,12 +3,20 @@ import java.util.ArrayList;
 
 public class Library {
     public final ArrayList<Book> books;
-
+    /**
+     * Constructor
+     * @author Anshul Bompada
+     * @param books
+     */
     public Library(ArrayList<Book> books) {
         this.books = books;
         System.out.println(books.toString());
     }
-    // Method to search books by various criteria
+    /**
+     * Method to search books by various criteria
+     * @author Anshul Bompada
+     * @return The search resuklts based on the feild and query
+     */
     public ArrayList<Book> search(String field, String query) {
         ArrayList<Book> searchResults = new ArrayList<>();
 

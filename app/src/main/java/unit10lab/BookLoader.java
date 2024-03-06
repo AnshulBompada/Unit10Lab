@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 public class BookLoader {
-    private File libraryData = new File("C:\\Users\\Anshul\\Documents\\RegularCode\\Unit10Lab\\app\\src\\main\\java\\unit10lab\\books.txt");
+    private File libraryData = new File("app\\src\\main\\java\\unit10lab\\books.txt");
     private Scanner libraryCounter;
     private Scanner libraryLoader;
 
